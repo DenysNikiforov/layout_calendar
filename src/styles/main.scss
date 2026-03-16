@@ -62,13 +62,13 @@ body {
   );
 
   @each $day, $offset in $start-offsets {
-    &--start-#{$day} &__day:first-child {
+    &--start-day-#{$day} &__day:first-child {
       margin-left: ($cell-size + $gap) * $offset;
     }
   }
 
   @for $count from 28 through 31 {
-    &--month-#{$count} &__day:nth-child(n + #{$count + 1}) {
+    &--month-length-#{$count} &__day:nth-child(n + #{$count + 1}) {
       display: none;
     }
   }
